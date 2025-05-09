@@ -1,6 +1,5 @@
 from client import BotpressClient
 import streamlit as st
-from constants import CONVERSATION_ID
 
 st.title("Botpress Front-end for Streamlit")
 

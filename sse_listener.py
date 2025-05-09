@@ -1,7 +1,6 @@
 import json
-from crud import listen_conversation
+from client import listen_conversation
 from constants import CONVERSATION_ID
-
 
 client = listen_conversation(conversation_id=CONVERSATION_ID)
 

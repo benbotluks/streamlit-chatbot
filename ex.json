@@ -1,0 +1,177 @@
+{
+  "messages": [
+    {
+      "id": "9e6d8157-8e42-49dd-8945-790ca969bc29",
+      "createdAt": "2025-05-09T16:39:02.296Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "Hi there! 👋 How can I help you today? Looking for wine recommendations, pairing tips, or just exploring? 🍷"
+      }
+    },
+    {
+      "id": "945385a5-82df-4a17-bc55-67d8701b1835",
+      "createdAt": "2025-05-09T16:38:53.060Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "hiiiii" }
+    },
+    {
+      "id": "83bd2f28-0517-4b50-b535-a6074878743c",
+      "createdAt": "2025-05-09T16:32:02.987Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "Hey there! 🍷 What's on your mind? Looking for wine recommendations, pairing tips, or just browsing?"
+      }
+    },
+    {
+      "id": "9f0b09d7-d867-41ff-8dfd-9817210a3166",
+      "createdAt": "2025-05-09T16:31:54.976Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "ay" }
+    },
+    {
+      "id": "460a0e4e-cdea-4066-93ea-5e45c5f6a086",
+      "createdAt": "2025-05-09T16:29:09.801Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "Yay! I'm glad you're excited! 🎉 How can I assist you further? Looking for more wine recommendations or something else?"
+      }
+    },
+    {
+      "id": "65b976ce-42a2-4989-a19c-62b544d94956",
+      "createdAt": "2025-05-09T16:29:08.070Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "omg this works!" }
+    },
+    {
+      "id": "8361ed7a-4700-49a3-92b1-a621766db7f2",
+      "createdAt": "2025-05-09T16:29:02.440Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "Hello again! 🍷 How can I assist you today? Are you looking for a wine recommendation, pairing advice, or just exploring?"
+      }
+    },
+    {
+      "id": "0a9dc5ab-64ad-40fc-b52c-558a06a084f7",
+      "createdAt": "2025-05-09T16:28:54.179Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "hi" }
+    },
+    {
+      "id": "1d538790-fb2e-43a5-a2cd-c64c4496229c",
+      "createdAt": "2025-05-09T15:27:48.638Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "It seems I couldn't find detailed information about **Nicosia 2013 Vulkà Bianco (Etna)** in our inventory right now. Would you like me to suggest another wine or assist you with something else?"
+      }
+    },
+    {
+      "id": "b09ef8a9-3b3b-43ee-b927-32bc1fcdfafa",
+      "createdAt": "2025-05-09T15:27:44.657Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "Tell me about the first one" }
+    },
+    {
+      "id": "23f0cc4c-a431-4157-898b-d1e57028a108",
+      "createdAt": "2025-05-09T15:27:32.400Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "It seems I couldn't find detailed information about **Nicosia 2013 Vulkà Bianco (Etna)** in our inventory right now. Would you like me to suggest another wine or assist you with something else?"
+      }
+    },
+    {
+      "id": "2d0d4e4e-24fe-45f4-a7ff-e2cd86e16eab",
+      "createdAt": "2025-05-09T15:27:27.307Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "Tell me about the first one" }
+    },
+    {
+      "id": "2fe7969d-bd35-49c0-ba74-77e0a43d4973",
+      "createdAt": "2025-05-09T15:27:06.942Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "It seems I couldn't find detailed information about **Nicosia 2013 Vulkà Bianco (Etna)** in our inventory right now. Would you like me to suggest another wine or assist you with something else?"
+      }
+    },
+    {
+      "id": "3d2e2dda-881e-4f5f-8efb-b0f6539daae7",
+      "createdAt": "2025-05-09T15:27:03.200Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "Tell me about the first one" }
+    },
+    {
+      "id": "06ee74b3-5150-4bad-a402-d5390a55436b",
+      "createdAt": "2025-05-09T15:26:26.650Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "It seems I couldn't find detailed information about **Nicosia 2013 Vulkà Bianco (Etna)** in our inventory right now. Would you like me to suggest another wine or assist you with something else?"
+      }
+    },
+    {
+      "id": "689b5329-d914-4a50-87b3-447fcb225454",
+      "createdAt": "2025-05-09T15:26:16.675Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "Tell me about the first one" }
+    },
+    {
+      "id": "0e6e6d07-08c8-4eaf-b7f1-89ce11fb155a",
+      "createdAt": "2025-05-09T15:24:41.751Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "It seems I couldn't find detailed information about **Nicosia 2013 Vulkà Bianco (Etna)** in our inventory right now. Would you like me to suggest another wine or assist you with something else?"
+      }
+    },
+    {
+      "id": "130621ce-f6a1-4960-8288-7db6b39672db",
+      "createdAt": "2025-05-09T15:24:31.590Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "Tell me about the first one" }
+    },
+    {
+      "id": "6b2bd7f8-b242-425e-947c-bbd9401b0bd9",
+      "createdAt": "2025-05-09T15:18:48.752Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "user_01JTJV0M5EWD6XTZX3SFCYBS4H",
+      "payload": {
+        "type": "text",
+        "text": "Here are some great options from our collection for your sunny afternoon: \n \n  - **Nicosia 2013 Vulkà Bianco (Etna)**: A white blend from Italy with tropical fruit, citrus, and a touch of dried sage. Perfect for a refreshing sip. \n  - **Quinta dos Avidagos 2011 Avidagos Red (Douro)**: A smooth Portuguese red with juicy red berries and a hint of structure. Great for easy drinking. \n  - **Rainstorm 2013 Pinot Gris (Willamette Valley)**: A crisp and tart Pinot Gris from Oregon, with lime and green pineapple flavors. \n  - **St. Julian 2013 Reserve Late Harvest Riesling (Lake Michigan Shore)**: A semi-dry Riesling with honey-drizzled guava and mango notes. A delightful choice for a sunny day. \n  - **Sweet Cheeks 2012 Vintner's Reserve Wild Child Block Pinot Noir (Willamette Valley)**: A rustic Pinot Noir with earthy and herbal tones, ideal for pairing with hearty dishes. \n \n  Let me know if any of these catch your eye, or if you'd like more details about any of them!"
+      }
+    },
+    {
+      "id": "ed4a4201-4593-4f49-ba3a-2ad5c309f4e1",
+      "createdAt": "2025-05-09T15:18:42.476Z",
+      "conversationId": "conv_01JTTKNGBGPMVRNTE6K1YGH1GH",
+      "userId": "12345",
+      "payload": { "type": "text", "text": "Yeah, whatever you've got" }
+    }
+  ],
+  "meta": {
+    "nextToken": "eyJzdGFydGluZ0F0IjoiMjAyNS0wNS0wOVQxNToxODo0Mi40NzZaIiwiaWQiOiJlZDRhNDIwMS00NTkzLTRmNDktYmEzYS0yYWQ1YzMwOWY0ZTEifQ=="
+  }
+}

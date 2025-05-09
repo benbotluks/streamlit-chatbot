@@ -1,5 +1,6 @@
-from crud import *
+from client import *
 from constants import *
 
-res = list_conversations()
-print(res)
+client = BotpressClient()
+conversations = client.list_messages(CONVERSATION_ID)
+print(conversations)

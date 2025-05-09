@@ -5,18 +5,53 @@ from constants import CONVERSATION_ID
 st.title("Botpress Front-end for Streamlit")
 
 client = BotpressClient(
-    api_id=st.secrets["CHAT_API_ID"], user_key=st.secrets["USER_KEY"]
+    api_id=st.secrets["CHAT_API_ID"], user_key=st.secrets["users"][0]["key"]
 )
 
+# user info
 user = client.get_user()
 user_id = user["user"]["id"]
 
-print("user id: ", user_id)
-
-if "messages" not in st.session_state:
+# conversation
+def create_conversation():
+    res = client.create_conversation()
+    print(f"Created new conversation: {res}")
+    conversation_id = res["conversation"]["id"]
+    st.session_state.active_conversation = conversation_id
     st.session_state.messages = []
-    messages = client.list_messages(CONVERSATION_ID)
-    next_token = messages["meta"]["nextToken"]
+    st.rerun()
+
+conversations = client.list_conversations()["conversations"]
+if not conversations:
+    create_conversation()
+st.session_state["active_conversation"] = conversations[0]["id"]
+conversation_ids = [conv["id"] for conv in conversations]
+
+
+col1, col2 = st.columns([5, 1])
+with col1:
+    conversation_id = st.selectbox(
+        "Select Conversation",
+        options=[conv["id"] for conv in conversations],
+        index=conversation_ids.index(st.session_state.active_conversation),
+    )
+
+with col2:
+    st.markdown("<div style='height: 1.9em'></div>", unsafe_allow_html=True)
+    if st.button("➕"):
+        create_conversation()
+
+selected_conversation = client.get_conversation(conversation_id)
+
+
+if (
+    "messages" not in st.session_state
+    or st.session_state.get("active_conversation") != conversation_id
+):
+    st.session_state.active_conversation = conversation_id
+    st.session_state.messages = []
+    messages = client.list_messages(conversation_id)
+    next_token = messages["meta"].get("nextToken")
 
     for message in messages["messages"][::-1]:
         role = "user" if message["userId"] == user_id else "assistant"
@@ -29,15 +64,15 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 if prompt := st.chat_input("*wine*-d it up"):
-    
+
     st.session_state.messages.append({"role": "user", "content": prompt})
-    client.create_message(prompt, conversation_id=CONVERSATION_ID)
-    
+    client.create_message(prompt, conversation_id=conversation_id)
+
     with st.chat_message("user"):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        stream = client.listen_conversation(conversation_id=CONVERSATION_ID)
+        stream = client.listen_conversation(conversation_id=conversation_id)
         response = st.write_stream(stream)
 
     st.session_state.messages.append({"role": "assistant", "content": response})

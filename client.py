@@ -33,8 +33,9 @@ class BotpressClient:
 
     def get_user(self):
         return self._request("GET", "/users/me")
-    
-    def create_user(self, user_data):
+
+    def create_user(self, name, id):
+        user_data = {"name": name, "id": id}
         return self._request("POST", "/users", json=user_data)
 
     def create_conversation(self):
@@ -42,6 +43,9 @@ class BotpressClient:
 
     def list_conversations(self):
         return self._request("GET", "/conversations")
+
+    def get_conversation(self, conversation_id):
+        return self._request("GET", f"/conversations/{conversation_id}")
 
     def create_message(self, message, conversation_id):
         payload = {

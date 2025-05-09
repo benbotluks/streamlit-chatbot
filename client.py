@@ -31,6 +31,9 @@ class BotpressClient:
 
     # --- Core API Methods ---
 
+    def get_user(self):
+        return self._request("GET", "/users/me")
+    
     def create_user(self, user_data):
         return self._request("POST", "/users", json=user_data)
 

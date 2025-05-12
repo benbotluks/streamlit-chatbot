@@ -1,3 +1,5 @@
+# app.py
+
 from client import BotpressClient
 import streamlit as st
 
@@ -11,6 +13,10 @@ client = BotpressClient(
 user = client.get_user()
 user_id = user["user"]["id"]
 
+conversations = client.list_conversations()["conversations"]
+conversation_ids = [conv["id"] for conv in conversations]
+
+
 # conversation
 def create_conversation():
     res = client.create_conversation()
@@ -20,11 +26,12 @@ def create_conversation():
     st.session_state.messages = []
     st.rerun()
 
-conversations = client.list_conversations()["conversations"]
+
 if not conversations:
     create_conversation()
-st.session_state["active_conversation"] = conversations[0]["id"]
-conversation_ids = [conv["id"] for conv in conversations]
+
+if "active_conversation" not in st.session_state:
+    st.session_state["active_conversation"] = conversations[0]["id"]
 
 
 col1, col2 = st.columns([5, 1])
@@ -49,15 +56,16 @@ if (
 ):
     st.session_state.active_conversation = conversation_id
     st.session_state.messages = []
+
     messages = client.list_messages(conversation_id)
     next_token = messages["meta"].get("nextToken")
 
     for message in messages["messages"][::-1]:
         role = "user" if message["userId"] == user_id else "assistant"
         text = message["payload"]["text"]
-
         st.session_state.messages.append({"role": role, "content": text})
 
+# display chat history
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])

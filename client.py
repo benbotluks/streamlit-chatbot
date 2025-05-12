@@ -3,11 +3,9 @@ import os
 import requests
 import sseclient
 from dotenv import load_dotenv
-from constants import *
+from constants import BASE_URI, HEADERS
 
 load_dotenv()
-
-from constants import *
 
 
 class BotpressClient:
@@ -38,6 +36,14 @@ class BotpressClient:
         user_data = {"name": name, "id": id}
         return self._request("POST", "/users", json=user_data)
 
+    def set_user_key(self, key):
+        self.user_key = key
+        self.headers["x-user-key"] = key
+
+    def create_and_set_user(self, name, id):
+        new_user = self.create_user(name, id)
+        self.set_user_key(new_user["key"])
+
     def create_conversation(self):
         return self._request("POST", "/conversations", json={"body": {}})
 
@@ -59,11 +65,13 @@ class BotpressClient:
 
     def listen_conversation(self, conversation_id):
         url = f"{self.base_url}/conversations/{conversation_id}/listen"
-        # response = requests.get(, stream=True, )
         for event in sseclient.SSEClient(url, headers=self.headers):
             print(event.data)
             if event.data == "ping":
                 continue
             data = json.loads(event.data)["data"]
-            is_bot = data["isBot"]
             yield data["payload"]["text"]
+
+
+if __name__ == "__main__":
+    client = BotpressClient()

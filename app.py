@@ -13,11 +13,11 @@ client = BotpressClient(
 user = client.get_user()
 user_id = user["user"]["id"]
 
+# conversations
 conversations = client.list_conversations()["conversations"]
 conversation_ids = [conv["id"] for conv in conversations]
 
 
-# conversation
 def create_conversation():
     res = client.create_conversation()
     print(f"Created new conversation: {res}")
@@ -49,7 +49,6 @@ with col2:
 
 selected_conversation = client.get_conversation(conversation_id)
 
-
 if (
     "messages" not in st.session_state
     or st.session_state.get("active_conversation") != conversation_id
@@ -73,13 +72,24 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("*wine*-d it up"):
 
     st.session_state.messages.append({"role": "user", "content": prompt})
-    client.create_message(prompt, conversation_id=conversation_id)
 
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    with st.chat_message("assistant"):
-        stream = client.listen_conversation(conversation_id=conversation_id)
-        response = st.write_stream(stream)
+    client.create_message(prompt, conversation_id=conversation_id)
 
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    with st.chat_message("assistant"):
+        response_box = st.empty()
+        last_rendered = ""
+
+        for message in client.listen_conversation(st.session_state.active_conversation):
+
+            message_id = message["id"]
+            message_text = message["text"]
+
+            if message_id != last_rendered:
+                last_rendered = message_id
+                response_box.markdown(message_text)
+                st.session_state.messages.append(
+                    {"role": "assistant", "content": message_text}
+                )

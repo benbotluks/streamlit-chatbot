@@ -66,11 +66,11 @@ class BotpressClient:
     def listen_conversation(self, conversation_id):
         url = f"{self.base_url}/conversations/{conversation_id}/listen"
         for event in sseclient.SSEClient(url, headers=self.headers):
-            print(event.data)
+            # print(event.data)
             if event.data == "ping":
                 continue
             data = json.loads(event.data)["data"]
-            yield data["payload"]["text"]
+            yield {"id": data["id"], "text": data["payload"]["text"]}
 
 
 if __name__ == "__main__":
